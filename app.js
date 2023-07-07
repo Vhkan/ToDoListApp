@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://Vdm:qazwsx123@cluster0.2m2enbz.mongodb.net/toDoListDB");
 
-const itemSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({ 
     name: String
 });
 const workItemSchema = new mongoose.Schema({
