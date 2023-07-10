@@ -1,17 +1,28 @@
+require("dotenv").config();
 const express = require("express");
+const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const app = express();
 const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-//arrays were here (items, workItems)
-
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Vdm:qazwsx123@cluster0.2m2enbz.mongodb.net/toDoListDB");
+// //not to get warnings inside the conole + placing our Mongoose connection into a try/catch function.
+mongoose.set("strictQuery", false); 
+const connectDB = async ()=> {
+    try {
+        const conn = await mongoose.connect(process.env.MONGO_URI);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+};
+// mongoose.connect("mongodb+srv://Vdm:qazwsx123@cluster0.2m2enbz.mongodb.net/toDoListDB");
 
 const itemSchema = new mongoose.Schema({ 
     name: String
@@ -55,7 +66,7 @@ const listSchema = {
 const List = mongoose.model("List", listSchema);
 
 
-app.get("/", async function (req, res) {
+app.get("/", async (req, res)=> {
     let allToDoItems = await Item.find({});
 
     try {
@@ -68,7 +79,7 @@ app.get("/", async function (req, res) {
     res.render("list", { listTitle: "Today", newListItems: allToDoItems });
 });
 
-app.get("/work", async function (req, res) {
+app.get("/work", async (req, res)=> {
 
     let allWorkItems = await WorkItem.find({});
 
@@ -83,7 +94,7 @@ app.get("/work", async function (req, res) {
 });
 
 // Route paramers with Express
-app.get("/:customListName", async function (req, res) {
+app.get("/:customListName", async (req, res)=> {
     const customListName = _.capitalize(req.params.customListName);
     let foundList = await List.findOne({ name: customListName });
 
@@ -104,7 +115,7 @@ app.get("/:customListName", async function (req, res) {
 });
 
 
-app.post("/", async function (req, res) {
+app.post("/", async (req,res)=> {
 
     try {
         let itemName = req.body.newItem;
@@ -128,7 +139,7 @@ app.post("/", async function (req, res) {
     };
 });
 
-app.post("/delete", async function (req, res) {
+app.post("/delete", async (req,res)=> {
     let checkedItemId = req.body.checkbox;
     let listName = req.body.listName;
 
@@ -147,13 +158,20 @@ app.post("/delete", async function (req, res) {
     };
 });
 
-app.get("/about", function (req, res) {
+app.get("/about", (req,res)=> {
     res.render("about");
 });
 
-
-app.listen(3000, function () {
-    console.log("Server is running on port 3000");
+// //We have to connect to the DB first and then run the app (specific to Cyclic). To do this => 
+connectDB().then(()=> {
+    app.listen(PORT, ()=> {
+        console.log(`Listening on port ${PORT}`);
+    }) 
 });
+
+
+// app.listen(3000, async ()=> {
+//     console.log("Server is running on port 3000");
+// });
 
 
