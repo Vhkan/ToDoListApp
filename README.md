@@ -17,7 +17,7 @@ Feel free to set up the application on your computer by following the installati
 ## Prerequisites
 Before running this project, make sure you have the following packages installed:
 - Node.js: [Download and Install Node.js](https://nodejs.org/en/download)
-- MongoDB: Download and Install MongoDB
+- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
 
 ## Installation
 Follow these steps to set up the application:
