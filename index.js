@@ -158,9 +158,9 @@ app.post("/delete", async (req,res)=> {
     };
 });
 
-app.get("/about", (req,res)=> {
-    res.render("about");
-});
+// app.get("/about", (req,res)=> {
+//     res.render("about");
+// });
 
 // //We have to connect to the DB first and then run the app (specific to Cyclic). To do this => 
 connectDB().then(()=> {
