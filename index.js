@@ -165,11 +165,6 @@ app.post("/delete", async (req,res)=> {
     };
 });
 
-// app.get("/about", (req,res)=> {
-//     res.render("about");
-// });
-
-
 // app.listen(3000, async ()=> {
 //     console.log("Server is running on port 3000");
 // });
