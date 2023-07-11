@@ -4,21 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "echo \"No build specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 1",
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vhkan/ToDoListV2.git"
   },
-
-
   "author": "Vdm",
   "license": "ISC",
+  "bugs": {"url": "https://github.com/Vhkan/ToDoListV2/issues"},
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "mongoose": "^7.3.1"
-  }
+  },
+  "homepage": "https://github.com/Vhkan/ToDoListV2#readme"
 }
