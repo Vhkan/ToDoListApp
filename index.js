@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // //not to get warnings inside the conole + placing our Mongoose connection into a try/catch function.
-//mongoose.set("strictQuery", false); 
-const connectDB = async ()=> {
+//mongoose.set("strictQuery", false);   
+const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
@@ -23,8 +23,8 @@ const connectDB = async ()=> {
     }
 };
 // //We have to connect to the DB first and then run the app (specific to Cyclic). To do this => 
-connectDB().then(()=> {
-    app.listen(PORT, ()=> {
+connectDB().then(() => {
+    app.listen(PORT, () => {
         console.log(`Listening on port ${PORT}`);
     }) 
 });
@@ -73,7 +73,7 @@ const listSchema = {
 const List = mongoose.model("List", listSchema);
 
 
-app.get("/", async (req, res)=> {
+app.get("/", async (req, res) => {
     let allToDoItems = await Item.find({});
 
     try {
@@ -86,7 +86,7 @@ app.get("/", async (req, res)=> {
     res.render("list", { listTitle: "Today", newListItems: allToDoItems });
 });
 
-app.get("/work", async (req, res)=> {
+app.get("/work", async (req, res) => {
 
     let allWorkItems = await WorkItem.find({});
 
@@ -122,7 +122,7 @@ app.get("/:customListName", async (req, res)=> {
 });
 
 
-app.post("/", async (req,res)=> {
+app.post("/", async (req,res) => {
 
     try {
         let itemName = req.body.newItem;
@@ -146,7 +146,7 @@ app.post("/", async (req,res)=> {
     };
 });
 
-app.post("/delete", async (req,res)=> {
+app.post("/delete", async (req,res) => {
     let checkedItemId = req.body.checkbox;
     let listName = req.body.listName;
 
