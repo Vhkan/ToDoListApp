@@ -3,7 +3,7 @@ The To-Do List App is a Node.js, Express, MongoDB, and EJS templating engine-bas
 
 ## Usage
 The application is hosted on Cyclic, so feel free to follow the link to check it out:
-https://troubled-wasp-undershirt.cyclic.app/
+### https://troubled-wasp-undershirt.cyclic.app/
 ### Home Page
 This is the default page that shows the "Todays" list where you can add new items to the list by typing in the input field and clicking the "+" button.
 ### Custom Lists
@@ -54,5 +54,5 @@ To run the To-Do List App, perform the following actions:
 
 ## Acknowledgments
 This application was developed under the guidance and support of my instructor Angela Yu.
-Special thanks to Angela Yu!
+Special thanks to [Angela Yu] (linkedin.com/in/angela-yu1)!
 
