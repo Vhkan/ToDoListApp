@@ -38,7 +38,7 @@ To run the To-Do List App, perform the following actions:
 4. Launch MongoDB Shell: `mongosh`
 5. Open another PowerShell window and navigate to the project directory: `cd ToDoListV2`
 6. Run the application using a nodemon: `nodemon index.js`
-7. Open a web browser and navigate to localhost:3000 to access the To-Do List app. Use localhost:3000/tuesday if you want to create a new To-Do list.
+7. Open a web browser and navigate to localhost:3000 to access the To-Do List app. Use localhost:3000/day if you want to create a new To-Do list.
 
 ## Project Structure
 - `index.js`: The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
