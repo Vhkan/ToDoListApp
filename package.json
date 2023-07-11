@@ -6,6 +6,12 @@
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vhkan/ToDoListV2.git"
+  },
+
+
   "author": "Vdm",
   "license": "ISC",
   "dependencies": {
