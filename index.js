@@ -1,10 +1,10 @@
 require("dotenv").config();
-const express = require("express");
-const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
-const app = express();
-const date = require(__dirname + "/date.js");
+const express = require("express");
 const mongoose = require("mongoose");
+const app = express();
+const PORT = process.env.PORT || 3000;
+//const date = require(__dirname + "/date.js");
 const _ = require("lodash");
 
 app.set("view engine", "ejs");
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // //not to get warnings inside the conole + placing our Mongoose connection into a try/catch function.
-mongoose.set("strictQuery", false); 
+//mongoose.set("strictQuery", false); 
 const connectDB = async ()=> {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI);
