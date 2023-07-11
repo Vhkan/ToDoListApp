@@ -54,5 +54,5 @@ To run the To-Do List App, perform the following actions:
 
 ## Acknowledgments
 This application was developed under the guidance and support of my instructor Angela Yu.
-Special thanks to [Angela Yu] (linkedin.com/in/angela-yu1)!
+Special thanks to [Angela Yu](linkedin.com/in/angela-yu1)!
 
