@@ -41,14 +41,14 @@ To run the To-Do List App, perform the following actions:
 7. Open a web browser and navigate to localhost:3000 to access the To-Do List app. Use localhost:3000/tuesday if you want to create a new To-Do list.
 
 ## Project Structure
-`index.js`: The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
-`Item`: The model for individual to-do list items.
-`WorkItem`: The model for work list items.
-`List`: The model for the custom lists.
-`public`: The directory containing static files such as CSS stylesheets.
-`styles.css`: The directory containing the CSS stylesheets for the application.
-`views`: The directory containing the EJS templates used to render the HTML pages.
-`header.ejs`: The header template that is included in other EJS files.
-`footer.ejs`: The footer template that is included in other EJS files.
-`list.ejs`: The template for the to-do list page.
+- `index.js`: The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
+- `Item`: The model for individual to-do list items.
+- `WorkItem`: The model for work list items.
+- `List`: The model for the custom lists.
+- `public`: The directory containing static files such as CSS stylesheets.
+- `styles.css`: The directory containing the CSS stylesheets for the application.
+- `views`: The directory containing the EJS templates used to render the HTML pages.
+- `header.ejs`: The header template that is included in other EJS files.
+- `footer.ejs`: The footer template that is included in other EJS files.
+- `list.ejs`: The template for the to-do list page.
 
