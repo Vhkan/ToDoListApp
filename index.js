@@ -22,6 +22,13 @@ const connectDB = async ()=> {
         process.exit(1);
     }
 };
+// //We have to connect to the DB first and then run the app (specific to Cyclic). To do this => 
+connectDB().then(()=> {
+    app.listen(PORT, ()=> {
+        console.log(`Listening on port ${PORT}`);
+    }) 
+});
+
 // mongoose.connect("mongodb+srv://Vdm:qazwsx123@cluster0.2m2enbz.mongodb.net/toDoListDB");
 
 const itemSchema = new mongoose.Schema({ 
@@ -157,18 +164,6 @@ app.post("/delete", async (req,res)=> {
         console.log(err);
     };
 });
-
-//app.get("/about", (req,res)=> {
-//    res.render("about");
-//});
-
-// //We have to connect to the DB first and then run the app (specific to Cyclic). To do this => 
-connectDB().then(()=> {
-    app.listen(PORT, ()=> {
-        console.log(`Listening on port ${PORT}`);
-    }) 
-});
-
 
 // app.listen(3000, async ()=> {
 //     console.log("Server is running on port 3000");
