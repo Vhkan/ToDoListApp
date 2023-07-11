@@ -2,7 +2,7 @@
 The To-Do List App is a Node.js, Express, MongoDB, and EJS templating engine-based application made to help users manage their daily tasks.
 
 ## Usage
-The application is hosted on Cyclic, so feel free to follow the link to check it out:
+The application is hosted on Cyclic. Feel free to follow the link to check it out:
 - https://troubled-wasp-undershirt.cyclic.app/
 ### Home Page
 This is the default page that shows the "Todays" list where you can add new items to the list by typing in the input field and clicking the "+" button.
