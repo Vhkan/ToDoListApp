@@ -1,4 +1,4 @@
-# ToDoListV2
+# To-Do List Application
 The To-Do List App is a Node.js, Express, MongoDB, and EJS templating engine-based application made to help users manage their daily tasks.
 
 ## Usage
@@ -52,3 +52,6 @@ To run the To-Do List App, perform the following actions:
 - `footer.ejs`: The footer template that is included in other EJS files.
 - `list.ejs`: The template for the to-do list page.
 
+## Acknowledgments
+This application was developed under the guidance and support of my instructor Angela Yu.
+Special thanks to linkedin.com/in/angela-yu1!
