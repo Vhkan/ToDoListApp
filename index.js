@@ -53,13 +53,13 @@ const toDo3 = new Item({
 
 
 const workItem1 = new WorkItem({
-    name: "Wake up at no later then 8 am every day."
+    name: "Code every day."
 });
 const workItem2 = new WorkItem({
-    name: "Do coding at least 6 hours a day."
+    name: "Keep working on improving coding skills."
 });
 const workItem3 = new WorkItem({
-    name: "Keep working on improving coding skills."
+    name: "Don't forget about having breaks."
 });
 
 defaultItems = [toDo1, toDo2, toDo3];
