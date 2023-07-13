@@ -3,11 +3,11 @@ The To-Do List App is a Node.js, Express, MongoDB, and EJS templating engine-bas
 
 ## Usage
 The application is hosted on Cyclic. Feel free to follow the link to check it out:
-- https://troubled-wasp-undershirt.cyclic.app/
+- https://dark-calf-shift.cyclic.app/
 ### Home Page
 This is the default page that shows the "Todays" list where you can add new items to the list by typing in the input field and clicking the "+" button.
 ### Custom Lists
-You can create custom lists by adding a name to the URL after "/" (e.g., https://troubled-wasp-undershirt.cyclic.app/monday) or (http://localhost:3000/monday (if you are hosting an app locally)). You can then add items to the custom list and access it using the previously specified name.
+You can create custom lists by adding a name to the URL after "/" (e.g., https://dark-calf-shift.cyclic.app/monday) or (http://localhost:3000/monday (if you are hosting an app locally)). You can then add items to the custom list and access it using the previously specified name.
 ### Deleting Items
 To delete an item, click on the checkbox next to the item. It will be marked as completed and automatically removed from the list.
 
